@@ -11,7 +11,8 @@ module.exports = function transform(arr) {
     }
     else if (arr[i] === '--discard-prev')
     {
-      if( (j > 0) && (arr[i-2] !== '--discard-next')) j--;      
+      if( (j > 0) && (arr[i-2] !== '--discard-next') ) j--; 
+      if  (i == arr.length-1) res.pop();     
     }
     else if (arr[i] === '--double-next')
     {
